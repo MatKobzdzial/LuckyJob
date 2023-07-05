@@ -1,6 +1,6 @@
 .sidebar {
   // height: 85vh;
-  overflow: scroll;
+  // overflow: scroll;
 
   background-color: $color-white;
   grid-column: 1 / 2;
@@ -11,7 +11,7 @@
   align-content: flex-start;
   row-gap: 2.5rem;
 
-  padding: 1rem;
+  padding: 2rem;
 
   &__offer {
     width: 22rem;

@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "inter";
@@ -16,10 +19,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr; }
+  grid-template-columns: max-content minmax(max-content, 4fr); }
 
 .sidebar {
-  overflow: scroll;
   background-color: #f9f9f9;
   grid-column: 1 / 2;
   display: grid;
@@ -28,7 +30,7 @@ body {
   justify-content: center;
   align-content: flex-start;
   row-gap: 2.5rem;
-  padding: 1rem; }
+  padding: 2rem; }
   .sidebar__offer {
     width: 22rem;
     height: 27rem;
@@ -100,21 +102,27 @@ body {
           align-self: center; }
 
 .recommended-jobs {
-  overflow: scroll;
   background-color: #f9f9f9;
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
   padding: 2rem 4rem;
   gap: 1rem;
+  justify-self: stretch;
   justify-content: center;
   align-items: center;
   justify-items: center; }
+  @media only screen and (max-width: 50em) {
+    .recommended-jobs {
+      grid-template-columns: max-content; } }
   .recommended-jobs__nav {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: minmax(max-content, 1fr) 1fr;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
     justify-self: stretch; }
+    @media only screen and (max-width: 50em) {
+      .recommended-jobs__nav {
+        grid-template-columns: max-content; } }
     .recommended-jobs__nav__title {
       justify-self: left;
       font-size: 2.8rem;
@@ -148,7 +156,13 @@ body {
 .navigation-bar {
   background-color: #141414;
   color: #fff;
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  display: grid; }
+  @media only screen and (max-width: 75em) {
+    .navigation-bar {
+      grid-template-columns: max-content 1fr max-content;
+      justify-items: flex-start;
+      row-gap: 1rem; } }
   .navigation-bar__location {
     display: flex;
     align-items: center;
@@ -156,13 +170,27 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     justify-self: flex-end; }
+    @media only screen and (max-width: 75em) {
+      .navigation-bar__location {
+        justify-self: flex-start; } }
   .navigation-bar__upper {
     display: grid;
     justify-items: center;
     align-items: center;
     gap: 5rem;
-    grid-template-columns: minmax(1rem, 2rem) minmax(max-content, 0.25fr) repeat(2, minmax(max-content, 1fr)) max-content minmax(1rem, 2rem);
+    grid-template-columns: minmax(1rem, 5rem) minmax(max-content, 0.25fr) repeat(2, minmax(max-content, 1fr)) max-content minmax(1rem, 5rem);
     margin: 1rem 0; }
+    @media only screen and (max-width: 75em) {
+      .navigation-bar__upper {
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+        justify-items: flex-start;
+        row-gap: 1rem;
+        column-gap: 1fr;
+        margin: 2rem;
+        padding: 0 2rem;
+        border-left: 0.1rem solid rgba(255, 255, 255, 0.3);
+        border-right: 0.1rem solid rgba(255, 255, 255, 0.3); } }
     .navigation-bar__upper_button {
       background-color: #141414;
       color: #fff;
@@ -179,6 +207,12 @@ body {
       display: flex;
       gap: 2rem;
       justify-self: flex-start; }
+      @media only screen and (max-width: 75em) {
+        .navigation-bar__upper-buttons {
+          grid-column: 2 / 3;
+          grid-row: 1 / span 3;
+          justify-self: center;
+          flex-direction: column; } }
   .navigation-bar__icon {
     border: 0.1rem solid #fff;
     padding: 0.5rem;
@@ -207,11 +241,22 @@ body {
     gap: 1rem;
     align-items: center; }
   .navigation-bar__lower {
-    margin: 2rem 14rem 2rem 14rem;
+    margin: 2rem 2rem 2rem 2rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     column-gap: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .navigation-bar__lower {
+        grid-template-columns: 1fr;
+        justify-items: flex-start;
+        row-gap: 1rem;
+        grid-column: 3 / -1;
+        grid-row: 1 / 2;
+        padding-left: 2rem;
+        border-left: 0.1rem solid rgba(255, 255, 255, 0.3);
+        padding-right: 2rem;
+        border-right: 0.1rem solid rgba(255, 255, 255, 0.3); } }
     .navigation-bar__lower__dropdown {
       display: grid;
       grid-template-columns: repeat(2, max-content) minmax(min-content, 8rem);
@@ -220,6 +265,10 @@ body {
       justify-items: center;
       border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
       cursor: pointer; }
+      @media only screen and (max-width: 75em) {
+        .navigation-bar__lower__dropdown {
+          grid-template-columns: repeat(3, max-content);
+          border-right: none; } }
       .navigation-bar__lower__dropdown-name {
         font-size: 1.4rem;
         font-weight: 500;
@@ -284,9 +333,15 @@ body {
   font-weight: 700;
   font-size: 1.8rem;
   justify-self: flex-start; }
+  @media only screen and (max-width: 75em) {
+    .page-logo {
+      grid-column: 1 / 2; } }
 
 .nav-division {
   border: 0.01rem solid rgba(255, 255, 255, 0.1); }
+  @media only screen and (max-width: 75em) {
+    .nav-division {
+      visibility: collapse; } }
 
 .settings-icon {
   transition: all 0.4s ease; }

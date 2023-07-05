@@ -13,9 +13,12 @@ $color-light-grey: #eceff5;
 $color-light-blue: #e0f3ff;
 $color-blue: #88d0ff;
 
-// $navigation-bar-height: 20vh;
-
-//
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+// $bp-largest: 80em;
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
 
 *,
 *::after,
@@ -28,11 +31,10 @@ $color-blue: #88d0ff;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  // font-size: 75%;
-  // font-size: 87.5%;
-  // font-size: 100%;
-  // width: 100vw;
-  // height: 100vh;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -44,6 +46,6 @@ body {
 .container {
   display: grid;
   // grid-template-columns: 2rem repeat(10, minmax(max-content, 1fr)) 2rem;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: max-content minmax(max-content, 4fr);
   // grid-template-columns: 20% 80%;
 }

@@ -1,31 +1,30 @@
 .recommended-jobs {
-  overflow: scroll;
-  // height: calc(100vh - $navigation-bar-height);
-  // height: 85vh;
-  // max-height: 100%;
   background-color: $color-white;
   grid-column: 2 / 3;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
-  // grid-template-columns: max-content;
   padding: 2rem 4rem;
   gap: 1rem;
 
-  // justify-self: flex-start;
-
+  justify-self: stretch;
   justify-content: center;
-
   align-items: center;
   justify-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: max-content;
+  }
+
   &__nav {
-    // width: inherit;
     grid-column: 1 / -1;
     display: grid;
-    // column-gap: 20rem;
-    grid-template-columns: minmax(max-content, 1fr) 1fr;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
     justify-self: stretch;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: max-content;
+    }
 
     &__title {
       justify-self: left;
