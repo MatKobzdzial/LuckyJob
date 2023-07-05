@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuckyJob</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <nav class="navigation-bar">
+      <div class="navigation-bar__upper">
+        <div class="page-logo">
+          <img
+            src="imgs/luckyjob_logo.svg"
+            alt="LuckyJob logo"
+            class="luckyjob-logo icon"
+          />LuckyJob
+        </div>
+        <div class="navigation-bar__upper-buttons">
+          <button class="navigation-bar__upper_button extra">Find job</button
+          ><button class="navigation-bar__upper_button">Messages</button
+          ><button class="navigation-bar__upper_button">Hiring</button
+          ><button class="navigation-bar__upper_button">Community</button
+          ><button class="navigation-bar__upper_button">FAQ</button>
+        </div>
+        <div class="navigation-bar__location">
+          <img
+            src="imgs/location-svgrepo-com.svg"
+            alt="Location"
+            class="location-icon icon"
+          />New York, NY
+        </div>
+        <div class="navigation-bar__icons">
+          <div class="navigation-bar__icon-user user-icon">
+            <div class="navigation-bar__icon-circle"></div>
+          </div>
+          <div class="navigation-bar__icon settings-icon">
+            <img
+              src="imgs/settings-svgrepo-com-3.svg"
+              alt="Settings"
+              class="icon"
+            />
+          </div>
+          <div class="navigation-bar__icon notification-icon">
+            <img
+              src="imgs/notification-svgrepo-com.svg"
+              alt="Notification"
+              class="icon"
+            />
+          </div>
+        </div>
+      </div>
+      <hr class="nav-division" />
+      <div class="navigation-bar__lower">
+        <div class="navigation-bar__lower__dropdown">
+          <img
+            src="imgs/magnifying-glass-svgrepo-com.svg"
+            alt="Magnifying glass"
+            class="lower-icon"
+          />
+          <p class="navigation-bar__lower__dropdown-name active">Designer</p>
+          <img
+            src="imgs/triangle-down-filled-svgrepo-com.svg"
+            alt="Arrow down"
+            class="small-icon navigation-bar__lower__dropdown-arrow"
+          />
+        </div>
+        <div class="navigation-bar__lower__dropdown">
+          <img
+            src="imgs/location-svgrepo-com-2.svg"
+            alt="Magnifying glass"
+            class="lower-icon"
+          />
+          <p class="navigation-bar__lower__dropdown-name">Work location</p>
+          <img
+            src="imgs/triangle-down-filled-svgrepo-com.svg"
+            alt="Arrow down"
+            class="small-icon navigation-bar__lower__dropdown-arrow"
+          />
+        </div>
+        <div class="navigation-bar__lower__dropdown">
+          <img
+            src="imgs/bag-svgrepo-com.svg"
+            alt="Magnifying glass"
+            class="lower-icon"
+          />
+          <p class="navigation-bar__lower__dropdown-name">Experience</p>
+          <img
+            src="imgs/triangle-down-filled-svgrepo-com.svg"
+            alt="Arrow down"
+            class="small-icon navigation-bar__lower__dropdown-arrow"
+          />
+        </div>
+        <div class="navigation-bar__lower__dropdown">
+          <img
+            src="imgs/money-dollar-svgrepo-com.svg"
+            alt="Magnifying glass"
+            class="lower-icon"
+          />
+          <p class="navigation-bar__lower__dropdown-name active">Per month</p>
+          <img
+            src="imgs/triangle-down-filled-svgrepo-com.svg"
+            alt="Arrow down"
+            class="small-icon navigation-bar__lower__dropdown-arrow"
+          />
+        </div>
+        <div class="navigation-bar__lower__slider">
+          <p class="navigation-bar__lower__slider-text">Salary range</p>
+          <p class="navigation-bar__lower__slider-range">$1,200 - $20,000</p>
+          <div class="navigation-bar__lower__slider-container">
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar">
+      <div class="sidebar__offer">
+        <div class="sidebar__offer__text">
+          Get Your best proffesion with LuckyJob
+        </div>
+        <div class="sidebar__offer__button button">Learn more</div>
+      </div>
+      <div class="sidebar__filters">
+        <div class="sidebar__filters__title">
+          <div class="sidebar__filters__title-text">Filters</div>
+          <img
+            src="imgs/triangle-left-filled-svgrepo-com.svg`"
+            alt="Arrow down"
+            class="sidebar__filters__title-icon"
+          />
+        </div>
+        <div class="sidebar__filters__group">
+          <div class="sidebar__filters__group__tags">
+            <p class="sidebar__filters__group__tags-title">Working schedule</p>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">Full time</p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">Part time</p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Internship
+              </p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Project work
+              </p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Voluntering
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__filters__group">
+          <div class="sidebar__filters__group__tags">
+            <p class="sidebar__filters__group__tags-title">Employment type</p>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">Full day</p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Flexible schedule
+              </p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Shift work
+              </p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Distant work
+              </p>
+            </div>
+            <div class="sidebar__filters__group__tags-button">
+              <button
+                class="sidebar__filters__group__tags-button-check"
+              ></button>
+              <p class="sidebar__filters__group__tags-button-text">
+                Shift method
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recommended-jobs">
+      <nav class="recommended-jobs__nav">
+        <div class="recommended-jobs__nav__title">
+          Recommended Jobs
+          <span class="recommended-jobs__nav__counter">386</span>
+        </div>
+        <div class="recommended-jobs__nav__sort">
+          Sort by:
+          <span class="recommended-jobs__nav__sort-type">Last updated</span
+          ><span class="recommended-jobs__nav__sort-img">
+            <img
+              src="imgs/sliders-horizontal-thin.svg"
+              alt="Sliders"
+              class="card__inner__img"
+            />
+          </span>
+        </div>
+      </nav>
+      <!-- <div class="card-container"> -->
+      <div class="card">
+        <div class="card__inner card__inner-1">
+          <div class="card__inner__date">20 May, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Amazon</div>
+          <div class="card__inner__position">Senior UI/UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/amazon_logo.png"
+              alt="Amazon logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Part time</li>
+            <li class="card__inner__tag">Senior level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$250/hr</p>
+          <p class="card__outer__location">San Francisco, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-2">
+          <div class="card__inner__date">4 Feb, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Google</div>
+          <div class="card__inner__position">Junior UI/UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/google_logo.avif"
+              alt="Google logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Junior level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+            <li class="card__inner__tag">Flexible schedule</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$150/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-3">
+          <div class="card__inner__date">29 Jan, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Dribbble</div>
+          <div class="card__inner__position">Senior Motion Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/dribbble_logo.png"
+              alt="Dribbble logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Part time</li>
+            <li class="card__inner__tag">Senior level</li>
+            <li class="card__inner__tag">Full Day</li>
+            <li class="card__inner__tag">Shift work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$260/hr</p>
+          <p class="card__outer__location">New York, NY</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-5">
+          <div class="card__inner__date">2 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Airbnb</div>
+          <div class="card__inner__position">Graphic Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/airbnb_logo.png"
+              alt="Airbnb logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Part time</li>
+            <li class="card__inner__tag">Senior level</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$300/hr</p>
+          <p class="card__outer__location">New York, NY</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-6">
+          <div class="card__inner__date">18 Jan, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Apple</div>
+          <div class="card__inner__position">Graphic Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/apple_logo.png"
+              alt="Amazon logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Part time</li>
+            <li class="card__inner__tag">Distant</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$140/hr</p>
+          <p class="card__outer__location">San Francisco, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__inner card__inner-4">
+          <div class="card__inner__date">11 Apr, 2023</div>
+          <div class="card__inner__bookmark">
+            <img
+              src="imgs/bookmark-svgrepo-com.svg"
+              alt="Bookmark"
+              class="card__inner__bookmark__img"
+            />
+          </div>
+          <div class="card__inner__employer">Twitter</div>
+          <div class="card__inner__position">UX Designer</div>
+          <div class="card__inner__logo">
+            <img
+              src="imgs/twitter_logo.png"
+              alt="Twitter logo"
+              class="card__inner__img"
+            />
+          </div>
+          <ul class="card__inner__tags">
+            <li class="card__inner__tag">Full time</li>
+            <li class="card__inner__tag">Middle level</li>
+            <li class="card__inner__tag">Distant</li>
+            <li class="card__inner__tag">Project work</li>
+          </ul>
+        </div>
+        <div class="card__outer">
+          <p class="card__outer__salary">$120/hr</p>
+          <p class="card__outer__location">California, CA</p>
+          <button class="button button__card">Details</button>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </body>
+</html>

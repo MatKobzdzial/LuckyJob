@@ -1,0 +1,49 @@
+// COLORS
+
+$color-black: #141414;
+$color-pure-white: #fff;
+$color-white: #f9f9f9;
+$color-off-white: #d7d7d7;
+
+$color-light-green: #d5f6ed;
+$color-light-pink: #fbe2f3;
+$color-light-orange: #ffe1cb;
+$color-light-purple: #e2dbf9;
+$color-light-grey: #eceff5;
+$color-light-blue: #e0f3ff;
+$color-blue: #88d0ff;
+
+// $navigation-bar-height: 20vh;
+
+//
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  // font-size: 75%;
+  // font-size: 87.5%;
+  // font-size: 100%;
+  // width: 100vw;
+  // height: 100vh;
+}
+
+body {
+  font-family: "inter";
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  // grid-template-columns: 2rem repeat(10, minmax(max-content, 1fr)) 2rem;
+  grid-template-columns: 1fr 4fr;
+  // grid-template-columns: 20% 80%;
+}

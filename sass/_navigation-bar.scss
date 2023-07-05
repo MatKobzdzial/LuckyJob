@@ -1,0 +1,459 @@
+.navigation-bar {
+  // height: 15vh;
+  background-color: $color-black;
+  color: $color-pure-white;
+  grid-column: 1 / -1;
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    justify-self: flex-end;
+  }
+
+  &__upper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 5rem;
+    grid-template-columns:
+      minmax(1rem, 2rem) minmax(max-content, 0.25fr) repeat(
+        2,
+        minmax(max-content, 1fr)
+      )
+      max-content
+      minmax(1rem, 2rem);
+
+    margin: 1rem 0;
+
+    &_button {
+      background-color: $color-black;
+      color: $color-pure-white;
+      font-size: 1.4rem;
+      font-weight: 400;
+      border: none;
+      margin: 0 0.2rem;
+      border-bottom: 0.1rem solid $color-black;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-bottom: 0.1rem solid $color-pure-white;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-self: flex-start;
+    }
+  }
+
+  &__icon {
+    border: 0.1rem solid $color-pure-white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &-user {
+      width: 4rem;
+      height: 4rem;
+      background-image: url(imgs/user-profile-icon.jpg);
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    &-circle {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: $color-blue;
+      border: 0.2rem solid $color-black;
+      position: relative;
+      top: 0%;
+      left: 77%;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__lower {
+    margin: 2rem 14rem 2rem 14rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
+
+    &__dropdown {
+      display: grid;
+      grid-template-columns: repeat(2, max-content) minmax(min-content, 8rem);
+      column-gap: 1rem;
+      align-items: center;
+      justify-items: center;
+      border-right: 0.1rem solid rgba($color-pure-white, 0.3);
+      cursor: pointer;
+
+      &-name {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-pure-white;
+        opacity: 60%;
+      }
+
+      &-arrow {
+        justify-self: flex-end;
+        margin-right: 1.3rem;
+      }
+    }
+
+    &__slider {
+      font-weight: 600;
+      font-size: 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      align-self: center;
+      column-gap: 1rem;
+    }
+  }
+}
+
+.lower-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.1rem solid rgba($color-pure-white, 0.3);
+  padding: 0.5rem;
+
+  &__dropdown {
+    &-arrow {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+.active {
+  opacity: 100%;
+}
+
+.extra {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:hover {
+    border-bottom: 1px solid $color-black;
+
+    animation-name: rainbow-flow;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.small-icon {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.user-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.page-logo {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  justify-self: flex-start;
+}
+
+.nav-division {
+  border: 0.01rem solid rgba($color-pure-white, 0.1);
+}
+
+.settings-icon {
+  transition: all 0.4s ease;
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+.notification-icon {
+  &:hover {
+    animation-name: bell-ring;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes bell-ring {
+  12% {
+    transform: rotate(15deg);
+  }
+
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  37% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  62% {
+    transform: rotate(15deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  88% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rainbow-flow {
+  10% {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 0, 0, 1) 10%,
+      rgba(255, 154, 0, 1) 20%,
+      rgba(208, 222, 33, 1) 30%,
+      rgba(79, 220, 74, 1) 40%,
+      rgba(63, 218, 216, 1) 50%,
+      rgba(47, 201, 226, 1) 60%,
+      rgba(28, 127, 238, 1) 70%,
+      rgba(95, 21, 242, 1) 80%,
+      rgba(186, 12, 248, 1) 90%,
+      rgba(251, 7, 217, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  20% {
+    background: linear-gradient(
+      90deg,
+      rgba(186, 12, 248, 1) 0%,
+      rgba(251, 7, 217, 1) 10%,
+      rgba(255, 0, 0, 1) 20%,
+      rgba(255, 0, 0, 1) 30%,
+      rgba(255, 154, 0, 1) 40%,
+      rgba(208, 222, 33, 1) 50%,
+      rgba(79, 220, 74, 1) 60%,
+      rgba(63, 218, 216, 1) 70%,
+      rgba(47, 201, 226, 1) 80%,
+      rgba(28, 127, 238, 1) 90%,
+      rgba(95, 21, 242, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  30% {
+    background: linear-gradient(
+      90deg,
+      rgba(95, 21, 242, 1) 0%,
+      rgba(186, 12, 248, 1) 10%,
+      rgba(251, 7, 217, 1) 20%,
+      rgba(255, 0, 0, 1) 30%,
+      rgba(255, 0, 0, 1) 40%,
+      rgba(255, 154, 0, 1) 50%,
+      rgba(208, 222, 33, 1) 60%,
+      rgba(79, 220, 74, 1) 70%,
+      rgba(63, 218, 216, 1) 80%,
+      rgba(47, 201, 226, 1) 90%,
+      rgba(28, 127, 238, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  40% {
+    background: linear-gradient(
+      90deg,
+      rgba(28, 127, 238, 1) 0%,
+      rgba(95, 21, 242, 1) 10%,
+      rgba(186, 12, 248, 1) 20%,
+      rgba(251, 7, 217, 1) 30%,
+      rgba(255, 0, 0, 1) 40%,
+      rgba(255, 0, 0, 1) 50%,
+      rgba(255, 154, 0, 1) 60%,
+      rgba(208, 222, 33, 1) 70%,
+      rgba(79, 220, 74, 1) 80%,
+      rgba(63, 218, 216, 1) 90%,
+      rgba(47, 201, 226, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  50% {
+    background: linear-gradient(
+      90deg,
+      rgba(47, 201, 226, 1) 0%,
+      rgba(28, 127, 238, 1) 10%,
+      rgba(95, 21, 242, 1) 20%,
+      rgba(186, 12, 248, 1) 30%,
+      rgba(251, 7, 217, 1) 40%,
+      rgba(255, 0, 0, 1) 50%,
+      rgba(255, 0, 0, 1) 60%,
+      rgba(255, 154, 0, 1) 70%,
+      rgba(208, 222, 33, 1) 80%,
+      rgba(79, 220, 74, 1) 90%,
+      rgba(63, 218, 216, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  60% {
+    background: linear-gradient(
+      90deg,
+      rgba(63, 218, 216, 1) 0%,
+      rgba(47, 201, 226, 1) 10%,
+      rgba(28, 127, 238, 1) 20%,
+      rgba(95, 21, 242, 1) 30%,
+      rgba(186, 12, 248, 1) 40%,
+      rgba(251, 7, 217, 1) 50%,
+      rgba(255, 0, 0, 1) 60%,
+      rgba(255, 0, 0, 1) 70%,
+      rgba(255, 154, 0, 1) 80%,
+      rgba(208, 222, 33, 1) 90%,
+      rgba(79, 220, 74, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  70% {
+    background: linear-gradient(
+      90deg,
+      rgba(79, 220, 74, 1) 0%,
+      rgba(63, 218, 216, 1) 10%,
+      rgba(47, 201, 226, 1) 20%,
+      rgba(28, 127, 238, 1) 30%,
+      rgba(95, 21, 242, 1) 40%,
+      rgba(186, 12, 248, 1) 50%,
+      rgba(251, 7, 217, 1) 60%,
+      rgba(255, 0, 0, 1) 70%,
+      rgba(255, 0, 0, 1) 80%,
+      rgba(255, 154, 0, 1) 90%,
+      rgba(208, 222, 33, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  80% {
+    background: linear-gradient(
+      90deg,
+      rgba(208, 222, 33, 1) 0%,
+      rgba(79, 220, 74, 1) 10%,
+      rgba(63, 218, 216, 1) 20%,
+      rgba(47, 201, 226, 1) 30%,
+      rgba(28, 127, 238, 1) 40%,
+      rgba(95, 21, 242, 1) 50%,
+      rgba(186, 12, 248, 1) 60%,
+      rgba(251, 7, 217, 1) 70%,
+      rgba(255, 0, 0, 1) 80%,
+      rgba(255, 0, 0, 1) 90%,
+      rgba(255, 154, 0, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  90% {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 154, 0, 1) 0%,
+      rgba(208, 222, 33, 1) 10%,
+      rgba(79, 220, 74, 1) 20%,
+      rgba(63, 218, 216, 1) 30%,
+      rgba(47, 201, 226, 1) 40%,
+      rgba(28, 127, 238, 1) 50%,
+      rgba(95, 21, 242, 1) 60%,
+      rgba(186, 12, 248, 1) 70%,
+      rgba(251, 7, 217, 1) 80%,
+      rgba(255, 0, 0, 1) 90%,
+      rgba(255, 0, 0, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
