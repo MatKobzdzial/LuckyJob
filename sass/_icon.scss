@@ -1,0 +1,60 @@
+.icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  &__user {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+
+  &__lower {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.1rem solid rgba($color-pure-white, 0.3);
+    padding: 0.5rem;
+
+    &__dropdown {
+      &-arrow {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  &__small {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
+
+  &__settings {
+    transition: all 0.4s ease;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__notification {
+    &:hover {
+      animation-name: bell-ring;
+      animation-duration: 0.5s;
+    }
+  }
+
+  &__logo {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    justify-self: flex-start;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-column: 1 / 2;
+    }
+  }
+}

@@ -55,7 +55,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      // align-self: flex-end;
       gap: 0.8rem;
 
       font-size: 1.2rem;
@@ -67,7 +66,6 @@
 
       &-img {
         color: $color-light-grey;
-        // align-self: flex-end;
       }
     }
   }

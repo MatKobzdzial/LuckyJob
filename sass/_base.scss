@@ -13,9 +13,9 @@ $color-light-grey: #eceff5;
 $color-light-blue: #e0f3ff;
 $color-blue: #88d0ff;
 
-// RESPONSIVE BREAKPOINTS
+// BREAKPOINTS
+
 $bp-largest: 75em; // 1200px
-// $bp-largest: 80em;
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
 $bp-small: 37.5em; // 600px;
@@ -45,7 +45,9 @@ body {
 
 .container {
   display: grid;
-  // grid-template-columns: 2rem repeat(10, minmax(max-content, 1fr)) 2rem;
   grid-template-columns: max-content minmax(max-content, 4fr);
-  // grid-template-columns: 20% 80%;
+}
+
+.active {
+  opacity: 100%;
 }
